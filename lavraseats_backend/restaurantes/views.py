@@ -78,7 +78,7 @@ def normalize_text(text):
 
 class FiltrarRestaurantesView(APIView):
     def get(self, request):
-        categoria = request.query_params.get('genero', None)
+        categoria = request.query_params.get('categoria', None)
         ordem_nota = request.query_params.get('ordem_nota', None)
 
         filtros = {}

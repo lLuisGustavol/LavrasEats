@@ -12,6 +12,7 @@ class Restaurante(models.Model):
     nome = models.CharField(max_length=255)
     telefone = models.CharField(max_length=20, blank=True, null=True)
     endereco = models.CharField(max_length=255)
+    descricao = models.TextField(blank=True, null=True)
     categoria = models.CharField(max_length=100)
     nota_media = models.FloatField(default=0.0)
     numero_avaliacoes = models.PositiveIntegerField(default=0)

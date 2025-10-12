@@ -15,6 +15,9 @@ ENV/
 */migrations/
 db.sqlite3
 
+# Django staticfiles
+staticfiles/
+
 # IDEs e editores
 .vscode/
 .idea/
@@ -27,13 +30,9 @@ db.sqlite3
 *.pyc
 .DS_Store
 
-# Arquivos de configuração sensíveis (opcional, se você tiver separados)
 .env
 *.env
 
-# Compiled files / system-specific
 Thumbs.db
 ehthumbs.db
 Desktop.ini
-
-

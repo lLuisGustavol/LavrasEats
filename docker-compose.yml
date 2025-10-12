@@ -1,0 +1,53 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: ./lavraseats_backend
+      dockerfile: Dockerfile
+    container_name: lavraseats_backend
+    env_file:
+      - ./lavraseats_backend/.env
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py collectstatic --noinput &&
+             python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./lavraseats_backend:/app
+    restart: always
+
+  frontend:
+    build:
+      context: ./lavraseats_frontend
+      dockerfile: Dockerfile
+    container_name: lavraseats_frontend
+    env_file:
+      - ./lavraseats_frontend/.env
+    ports:
+      - "3000:3000"
+    command: npm run dev
+    volumes:
+      - ./lavraseats_frontend:/app
+    depends_on:
+      - backend
+    restart: always
+
+  db:
+    image: postgres:16
+    container_name: lavras_db
+    environment:
+      POSTGRES_DB: lavraseats
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  pgdata:

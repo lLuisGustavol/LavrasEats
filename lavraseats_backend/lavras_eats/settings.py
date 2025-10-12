@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'usuarios',
     'restaurantes',
     'avaliacoes',
+    'recomendacoes',
     'rest_framework',
     'rest_framework_simplejwt',
 ]
@@ -126,6 +127,7 @@ USE_TZ = True
 
 # Arquivos estáticos
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Arquivos de mídia (upload)
 MEDIA_URL = '/imgs/'

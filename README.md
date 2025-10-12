@@ -58,6 +58,24 @@ A IA buscará nas avaliações existentes restaurantes de açaí bem avaliados e
 
 ---
 
+## 💡 Recomendações Inteligentes
+
+Além das avaliações de restaurantes, o LavrasEats agora oferece **sugestões personalizadas** com base no que o usuário deseja comer.  
+O usuário pode escrever um prompt descrevendo suas preferências, e a IA interpreta o texto para recomendar restaurantes que melhor atendem ao pedido.
+
+**Exemplo de prompt:**
+
+> "Quero comer um hambúrguer artesanal que seja rápido e tenha boas avaliações de sabor."
+
+O sistema analisa:  
+- 📝 As avaliações existentes dos restaurantes  
+- 🍔 O tipo de comida desejada  
+- ⏱️ Critérios como rapidez no atendimento, qualidade, preço e experiência geral  
+
+E retorna uma lista de restaurantes **ordenada pelo melhor encaixe com o prompt**.
+
+---
+
 ## 🚀 Funcionalidades
 
 - 📝 **Cadastro de restaurantes** e envio de avaliações textuais  
@@ -141,7 +159,7 @@ Isso irá iniciar:
 ### 3️⃣ Criar Superusuário do Django
 
 ```bash
-docker exec -it lavraseats-backend-1 python manage.py createsuperuser
+docker exec -it lavraseats_backend python manage.py createsuperuser
 ```
 
 ---
