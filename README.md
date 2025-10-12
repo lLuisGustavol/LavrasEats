@@ -156,7 +156,15 @@ Isso irá iniciar:
 
 ---
 
-### 3️⃣ Criar Superusuário do Django
+### 3️⃣ Aplicar as migrations manualmente
+
+```bash
+docker exec -it lavraseats_backend python manage.py migrate
+```
+
+---
+
+### 4️⃣ Criar Superusuário do Django
 
 ```bash
 docker exec -it lavraseats_backend python manage.py createsuperuser
@@ -164,9 +172,8 @@ docker exec -it lavraseats_backend python manage.py createsuperuser
 
 ---
 
-### 4️⃣ Acessar a aplicação
-
-- Backend: [http://localhost:8000](http://localhost:8000)  
+### 5️⃣ Acessar a aplicação
+ 
 - Frontend: [http://localhost:3000](http://localhost:3000)
 
 Para parar os containers:
