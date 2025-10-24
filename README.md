@@ -186,7 +186,8 @@ docker-compose down
 
 ## 👥 Integrantes do Projeto
 
-- 🎓 **Leonardo Gonçalves Flora**  
+- 🎓 **Leonardo Gonçalves Flora**
+- 🎓 **Luis Gustavo Morais** 
 
 ---
 
